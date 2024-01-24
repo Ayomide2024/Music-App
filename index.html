@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Music App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Simple Music App</h1>
+
+  <button onclick="playMusic()">Play Music</button>
+  <button onclick="pauseMusic()">Pause Music</button>
+
+
+  <audio id="musicPlayer" controls>
+    <source src="Ngozi.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const musicPlayer = document.getElementById('musicPlayer');
+
+    function playMusic() {
+      musicPlayer.play();
+    }
+
+    function pauseMusic() {
+      musicPlayer.pause();
+    }
+  </script>
+
+</body>
+</html>
